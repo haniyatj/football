@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'renter_home_page.dart'; 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login Page'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -51,6 +50,11 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Handle login button press
+                 // Navigate to RenterHomePage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RenterHomePage()),
+                );
               },
               style: ElevatedButton.styleFrom(
                backgroundColor: Color.fromRGBO(104, 135, 55, 2), // Dark green background color
